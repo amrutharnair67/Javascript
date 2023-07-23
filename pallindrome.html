@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    let n=101
+    var t
+    let rev=0
+    document.write(" ",n)
+    while(n>0){
+        t=n%10 
+        rev=(rev*10 )+ t
+        n=Math.floor(n/10)
+    }
+    document.write(rev)
+    if(n==rev)
+    {
+       document.write("pallindrome")
+    }
+   </script> 
+</body>
+</html>
