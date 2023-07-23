@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    function reverseNumber(number) {
+        let n = Math.abs(number); // Take the absolute value to handle negative numbers
+        let rev = 0;
+
+        while (n > 0) {
+            let digit = n % 10;
+            rev = rev * 10 + digit;
+            n = Math.floor(n / 10);
+        }
+
+        // If the input number was negative, make the reversed number negative as well
+        if (number < 0) {
+            rev = -rev;
+        }
+
+        return rev;
+    }
+
+    let numToReverse = 12345;
+    let reversedNum = reverseNumber(numToReverse);
+    document.write("Original Number: ", numToReverse, "<br>");
+    document.write("Reversed Number: ", reversedNum);
+   </script> 
+</body>
+</html>
