@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculate Mean</title>
+</head>
+<body>
+    <h2>Calculate Mean of Numbers</h2>
+    <p>Enter numbers separated by commas (e.g., 1, 2, 3)</p>
+    <input type="text" id="numbersInput">
+    <button onclick="calculateMean()">Calculate Mean</button>
+    <p id="meanResult"></p>
+
+    <script>
+        function calculateMean() {
+            const numbersInput = document.getElementById('numbersInput').value;
+            const numbersArray = numbersInput.split(',').map(Number);
+
+            if (numbersArray.length === 0) {
+                document.getElementById('meanResult').textContent = 'Please enter numbers.';
+                return;
+            }
+
+            const sum = numbersArray.reduce((acc, num) => acc + num, 0);
+            const mean = sum / numbersArray.length;
+
+            document.getElementById('meanResult').textContent = `Mean: ${mean.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
