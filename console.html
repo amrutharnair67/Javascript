@@ -1,0 +1,26 @@
+// Logging various messages and data to the console
+console.log("This is a general log.");
+console.error("This is an error message.");
+console.warn("This is a warning message.");
+console.info("This is an informational message.");
+
+// Logging data in tabular format
+const data = [
+  { name: "John", age: 30 },
+  { name: "Jane", age: 25 },
+  { name: "Bob", age: 40 }
+];
+console.table(data);
+
+// Grouping related logs
+console.group("Group 1");
+console.log("Log 1");
+console.log("Log 2");
+console.groupEnd();
+
+// Measuring time for an operation
+console.time("Time taken");
+for (let i = 0; i < 1000000; i++) {
+  // Some time-consuming operation
+}
+console.timeEnd("Time taken");
